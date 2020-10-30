@@ -47,7 +47,6 @@ public abstract class GenericDAO<T, I extends Serializable> {
             t.commit();
             
             Message.logAndScreenMessage(MessageType.INFO, persistedClass.getSimpleName()+ " salvo(a) com sucesso!");
-//            entityManager.close();
             return entity;
         } catch (Exception e) {
             if(e.getMessage().contains("ConstraintViolationException")){

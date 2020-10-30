@@ -76,27 +76,27 @@ public class EmprestimoListBean extends ProcessReport implements Serializable {
         this.emprestimo = emprestimo;
     }
 
-    public List getEmprestimos() {
+    public List<Emprestimo> getEmprestimos() {
         return emprestimos;
     }
 
-    public void setEmprestimos(List emprestimos) {
+    public void setEmprestimos(List<Emprestimo> emprestimos) {
         this.emprestimos = emprestimos;
     }
 
-    public List getEmprestimosSelecionados() {
+    public List<Emprestimo> getEmprestimosSelecionados() {
         return emprestimosSelecionados;
     }
 
-    public void setEmprestimosSelecionados(List emprestimosSelecionados) {
+    public void setEmprestimosSelecionados(List<Emprestimo> emprestimosSelecionados) {
         this.emprestimosSelecionados = emprestimosSelecionados;
     }
 
-    public List getEmprestimosFiltrados() {
+    public List<Emprestimo> getEmprestimosFiltrados() {
         return emprestimosFiltrados;
     }
 
-    public void setEmprestimosFiltrados(List emprestimosFiltrados) {
+    public void setEmprestimosFiltrados(List<Emprestimo> emprestimosFiltrados) {
         this.emprestimosFiltrados = emprestimosFiltrados;
     }
 

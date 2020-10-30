@@ -81,7 +81,7 @@ public class AutorListBean extends ProcessReport implements Serializable {
         this.autores = autores;
     }
 
-    public List getAutoresSelecionados() {
+    public List<Autor> getAutoresSelecionados() {
         return autoresSelecionados;
     }
 
@@ -89,11 +89,11 @@ public class AutorListBean extends ProcessReport implements Serializable {
         this.autoresSelecionados = autoresSelecionados;
     }
 
-    public List getAutoresFiltrados() {
+    public List<Autor> getAutoresFiltrados() {
         return autoresFiltrados;
     }
 
-    public void setAutoresFiltrados(List autoresFiltrados) {
+    public void setAutoresFiltrados(List<Autor> autoresFiltrados) {
         this.autoresFiltrados = autoresFiltrados;
     }
 

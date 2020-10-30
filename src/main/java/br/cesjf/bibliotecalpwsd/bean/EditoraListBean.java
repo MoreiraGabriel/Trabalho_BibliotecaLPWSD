@@ -73,8 +73,8 @@ public class EditoraListBean extends ProcessReport implements Serializable {
         this.editora = editora;
     }
 
-    public List getEditoras() {
-        return editoras = EditoraDAO.getInstance().getList();
+    public List<Editora> getEditoras() {
+        return EditoraDAO.getInstance().getList();
     }
 
     public void setEditoras(List editoras) {
@@ -85,15 +85,15 @@ public class EditoraListBean extends ProcessReport implements Serializable {
         return editorasSelecionados;
     }
 
-    public void setEditorasSelecionados(List editorasSelecionados) {
+    public void setEditorasSelecionados(List<Editora> editorasSelecionados) {
         this.editorasSelecionados = editorasSelecionados;
     }
 
-    public List getEditorasFiltrados() {
+    public List<Editora> getEditorasFiltrados() {
         return editorasFiltrados;
     }
 
-    public void setEditorasFiltrados(List editorasFiltrados) {
+    public void setEditorasFiltrados(List<Editora> editorasFiltrados) {
         this.editorasFiltrados = editorasFiltrados;
     }
 

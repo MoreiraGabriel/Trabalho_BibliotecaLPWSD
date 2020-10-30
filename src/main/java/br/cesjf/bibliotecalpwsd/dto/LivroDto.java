@@ -6,6 +6,7 @@
 package br.cesjf.bibliotecalpwsd.dto;
 
 import br.cesjf.bibliotecalpwsd.model.Livro;
+import br.cesjf.bibliotecalpwsd.strategy.LivroStrategy;
 import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,12 +15,14 @@ import java.util.stream.Collectors;
  *
  * @author gabriel.moreira
  */
-public class LivroDto implements Serializable{
+public class LivroDto extends LivroStrategy implements Serializable{
     private static final long serialVersionUID = 1L;
     
     private Long id;
     private String titulo;
     private Integer ano;
+    
+    public LivroDto(){}
     
     public LivroDto(Livro livro){
         this.id = livro.getId();
@@ -27,7 +30,8 @@ public class LivroDto implements Serializable{
         this.ano = livro.getAno();
     }
 
-    public static List<LivroDto> converteDto(List<Livro> lista) {        
+    @Override
+    public List<LivroDto> converteLivro(List<Livro> lista) {        
         return lista.stream().map(LivroDto::new).collect(Collectors.toList());
     }
 

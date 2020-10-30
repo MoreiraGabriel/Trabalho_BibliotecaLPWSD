@@ -73,27 +73,27 @@ public class UsuarioListBean extends ProcessReport implements Serializable {
         this.usuario = usuario;
     }
 
-    public List getUsuarios() {
+    public List<Usuario> getUsuarios() {
         return usuarios;
     }
 
-    public void setUsuarios(List usuarios) {
+    public void setUsuarios(List<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
 
-    public List getUsuariosSelecionados() {
+    public List<Usuario> getUsuariosSelecionados() {
         return usuariosSelecionados;
     }
 
-    public void setUsuariosSelecionados(List usuariosSelecionados) {
+    public void setUsuariosSelecionados(List<Usuario> usuariosSelecionados) {
         this.usuariosSelecionados = usuariosSelecionados;
     }
 
-    public List getUsuariosFiltrados() {
+    public List<Usuario> getUsuariosFiltrados() {
         return usuariosFiltrados;
     }
 
-    public void setUsuariosFiltrados(List usuariosFiltrados) {
+    public void setUsuariosFiltrados(List<Usuario> usuariosFiltrados) {
         this.usuariosFiltrados = usuariosFiltrados;
     }
 

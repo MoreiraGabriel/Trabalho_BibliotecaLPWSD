@@ -33,11 +33,11 @@ public class ResumoLivroBean implements Serializable {
     
     //construtor
     public ResumoLivroBean() {
-        livrosDto = LivroDto.converteDto(LivroDAO.getInstance().getList());
+        livrosDto = new LivroDto().converteLivro(LivroDAO.getInstance().buscarTop5());
     }
     
     public List<LivroDto> getLivros() {        
-        return LivroDto.converteDto(LivroDAO.getInstance().getList());
+        return new LivroDto().converteLivro(LivroDAO.getInstance().getList());
     }
     
     public void buscarPorId(Long id) {
@@ -49,7 +49,7 @@ public class ResumoLivroBean implements Serializable {
         
         if(livro.getId() == null) {
             Message.logAndScreenMessage(MessageType.WARNING, "Não foram encontrados livros");
-            livrosDto = LivroDto.converteDto(LivroDAO.getInstance().getList());
+            livrosDto = new LivroDto().converteLivro(LivroDAO.getInstance().getList());
         }else{
             livrosDto.add(new LivroDto(livro));
         }
@@ -63,17 +63,17 @@ public class ResumoLivroBean implements Serializable {
         }
         List<List> parameters = new ArrayList<>();
         parameters.add(Arrays.asList("titulo", titulo));
-        livrosDto = LivroDto.converteDto(LivroDAO.getInstance().find("Livro.findByTitulo", parameters));
+        livrosDto = new LivroDto().converteLivro(LivroDAO.getInstance().find("Livro.findByTitulo", parameters));
         if(livrosDto.isEmpty()) {
             Message.logAndScreenMessage(MessageType.WARNING, "Não foram encontrados livros");
-            livrosDto = LivroDto.converteDto(LivroDAO.getInstance().getList());
+            livrosDto = new LivroDto().converteLivro(LivroDAO.getInstance().getList());
         }
         this.id = null;
         this.titulo = null;
     }
     
     public void limpar() {
-        livrosDto = LivroDto.converteDto(LivroDAO.getInstance().getList());
+        livrosDto = new LivroDto().converteLivro(LivroDAO.getInstance().getList());
         this.id = null;
         this.titulo = null;
     }
